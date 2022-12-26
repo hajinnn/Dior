@@ -219,7 +219,7 @@ $('.sub-menu-box #tab1').mouseenter(function(){
       var myPos = $(window).scrollTop();
       var sec2Pos = $('.sec2').offset().top;
       var sec3Pos = $('.sec3').offset().top - $(window).height();
-      var auditionPos = $('.both-side').offset().top - 300;
+      var sneakers = $('.both-side').offset().top - 300;
       if(myPos < sec2Pos && ww > 1183){
           // $('.sec2-container').attr('data-0', '');
           // $('.sec2-container').attr('data-4000', '');
@@ -240,43 +240,14 @@ $('.sub-menu-box #tab1').mouseenter(function(){
               top: 0,
               left: 0
           })
-      }else if(myPos >= sec3Pos && myPos < auditionPos){
-          // $('.sec2-container').css({
-          //     position: 'absolute',
-          //     top: 'auto',
-          //     bottom: 0,
-          //     left: 0
-          // })
-      }else if(myPos >= (auditionPos)) {
-          auditionScr();
+      }else if(myPos >= sec3Pos && myPos < sneakers){
+      
+      }else if(myPos >= (sneakers)) {
+          Category();
       }
   }) 
   
 
-  // audition 스크롤 효과
-  function auditionScr() {
-      console.log('af')
-      $('.both-side-inner > p').css({
-          opacity: 1,
-          transform: 'translateY(0px)'
-      })
-      setTimeout(function(){
-          $('.both-side-inner > span').css({
-              opacity: 1,
-              transform: 'translateY(0px)'
-          })
-      }, 150)
-      setTimeout(function(){
-          $('.both-side__line').css({
-              height: '60vh'
-          })
-      }, 400)
-      setTimeout(function(){
-          $('.both-side__middle').css({
-              opacity: 1
-          })
-      }, 1300)
-  }
 
 
 
