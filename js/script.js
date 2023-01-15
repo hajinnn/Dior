@@ -1,46 +1,23 @@
 ﻿$(document).ready(function(){
 
+  // AOS
+  AOS.init();
 
-  // 햄버거버튼 클릭
+
+  // 햄버거버튼 script
   $('header .hamberger').click(function(){
     $('header .hamberger span').toggleClass('active');
-    
-    $('.hbg-box').toggleClass('active');
-    
-    
+    $('.hbg-box').toggleClass('active'); 
   });
-  // 햄버거박스 메뉴 슬라이드 부분
 
-  // $(".menu-top >a").click(function(){
-  //   var submenu = $(this).next(".menu-top ul");
-  // if( submenu.is(":visible") ){
-  //   submenu.slideUp();
-
-  // }
-  // else{
-  //   submenu.slideDown();
-
-  // }
-    
-  // });
-  
-
+  // 모바일 메뉴클릭 script
   $('.hbg-box .menu-top').click(function(){
-    // $(this).siblings().find('.top-menu svg').removeClass('active');
-    // $(this).siblings().children('.sub-menu').slideUp();
-    // $(this).find('.top-menu svg').toggleClass('active');
-    // $(this).children('.sub-menu').slideToggle();
 
     $(this).siblings().find('.top-menu svg').removeClass('active');
     $(this).siblings().children('.sub-menu').slideUp();
     $(this).find('.top-menu svg').toggleClass('active');
     $(this).children('.sub-menu').slideToggle();
   });
-
-
-
-
-
   
   //sec-4 swiper
   var swiper = new Swiper(".mySwiper5", {
@@ -89,7 +66,6 @@
 
   $('.slide-view .btn-right').click(function(){
     $('.slide-view .slide-wrap').animate({
-        // 애니메이트는 트렌지션 안걸어도 자연스럽게 넘어감
       left: -362
     },function(){
         $('.slide-view .slide-wrap').css({
@@ -100,8 +76,7 @@
     });
 });
 
-  // AOS
-  AOS.init();
+
 
   // window width 플러그인 제거
   var ww = $(window).width();
@@ -243,7 +218,6 @@ $('.sub-menu-box #tab1').mouseenter(function(){
       }else if(myPos >= sec3Pos && myPos < sneakers){
       
       }else if(myPos >= (sneakers)) {
-          Category();
       }
   }) 
   
