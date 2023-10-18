@@ -83,10 +83,11 @@ header{
     top: 0;
     left: 0;
     z-index: 999999;
-    transition: 0.8s;
+    
 }
 header.active{
     background-color: #fff;
+    transition: 0.8s;
 }
 header .header-wrap{
     display: flex;

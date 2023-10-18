@@ -150,13 +150,13 @@ $(window).scroll(function(){
 
 // 마우스 벗어났을 때 서브메뉴박스 안보이게 처리
 $('.sub-mini-box').mouseleave(function(){
-  $('.sub-menu-box').slideUp().removeClass('active');
+  $('.sub-menu-box').removeClass('active');
   $('header').removeClass('active');
   
 });
 // 마우스 벗어났을 때 서브메뉴박스 안보이게 처리
 $('.sub-menu-box').mouseleave(function(){
-  $(this).slideUp().removeClass('active');
+  $(this).hide().removeClass('active');
   $('header').removeClass('active');
   $('header .header-wrap svg').removeClass('active');
   $('header .header-wrap .search svg path').removeClass('active');
